@@ -9,7 +9,12 @@ public class Author {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void addTitle(Title title){
+        //System.out.println("Book added: " + title);
        titles.add(title);
     }
 
@@ -18,21 +23,8 @@ public class Author {
         for (Title t: titles){
             total += t.calculateRoyalty();
         }
-        return total;
+        return Math.round(total);
     }
 
-
-    public String getName() {
-        return name;
-    }
-
-
-    /*@Override
-    public String toString() {
-        return "Author{" +
-                "name='" + name + '\'' +
-                ", titles=" + titles +
-                '}';
-    }*/
 
 }

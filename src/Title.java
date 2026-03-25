@@ -1,4 +1,5 @@
 public abstract class Title {
+
     private String title;
     protected String literatureType;
     private static final double RATE = 0.067574;
@@ -8,21 +9,31 @@ public abstract class Title {
         this.literatureType = literatureType;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public String getLiteratureType() {
-        return literatureType;
-    }
-,
     protected double calculateRoyalty(){
         return calculatePoints() * RATE;
 
     }
 
+    protected double convertLiteratureType(){
+
+        switch (literatureType){
+            case "BI":
+            case "TE":
+                return 3;
+            case "LYRIK":
+                return 6;
+            case "SKØN":
+                return 1.7;
+            case "FAG":
+                return 1;
+
+        }
+        return 0;
+
+    }
+
+    // abstract da metoden implementeres i printed& audiobook class
     protected abstract double calculatePoints();
-    protected abstract double convertLiteratureType();
 
 
 }
