@@ -14,7 +14,6 @@ public class Author {
     }
 
     public void addTitle(Title title){
-        //System.out.println("Book added: " + title);
        titles.add(title);
     }
 
