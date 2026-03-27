@@ -15,10 +15,8 @@ public abstract class Title {
     }
 
     protected double convertLiteratureType(){
-
         switch (literatureType){
-            case "BI":
-            case "TE":
+            case "BI", "TE":
                 return 3;
             case "LYRIK":
                 return 6;
