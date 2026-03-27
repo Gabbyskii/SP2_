@@ -22,7 +22,7 @@ public class Author {
         for (Title t: titles){
             total += t.calculateRoyalty();
         }
-        return Math.round(total);
+        return Math.round(total *100.0)/100.0;
     }
 
 
