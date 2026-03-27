@@ -1,6 +1,6 @@
 public class AudioBook extends Title {
-    int durationInMinutes;
-    int copies;
+    protected int durationInMinutes;
+    protected int copies;
 
     public AudioBook(String title, String literatureType, int durationInMinutes, int copies) {
         super(title, literatureType);

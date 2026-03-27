@@ -1,7 +1,7 @@
 public class PrintedBook extends Title {
 
-    int pages;
-    int copies;
+    protected int pages;
+    protected int copies;
 
     public PrintedBook(String title, String literatureType, int pages, int copies) {
         super(title, literatureType);
